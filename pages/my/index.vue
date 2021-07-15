@@ -71,7 +71,7 @@
 
 		<view class="u-m-t-20">
 			<u-cell-group>
-				<u-cell-item title="收藏">
+				<u-cell-item title="收藏1">
 					<u-icon class="u-m-r-10" slot="icon" color="#F6AE65" size="40" name="star"></u-icon>
 				</u-cell-item>
 				<u-cell-item title="相册">

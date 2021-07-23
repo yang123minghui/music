@@ -2,7 +2,8 @@
 	<view class="">
 		<u-cell-group>
 			<u-cell-item title="头像">
-				<u-avatar :src="pic" size="100"></u-avatar>
+				<u-avatar slot="right-icon" :src="pic" size="100" @click="toImgUpload">
+				</u-avatar>
 			</u-cell-item>
 			<u-cell-item title="昵称" value="小青年" @click="show=true"></u-cell-item>
 			<u-cell-item title="密码" value="修改" @click="pwdShow=true"></u-cell-item>
@@ -10,8 +11,11 @@
 		</u-cell-group>
 		<view class="u-m-t-10">
 			<u-cell-group>
-				<u-cell-item title="我的地址"></u-cell-item>
+				<u-cell-item title="我的地址" @click="toAddr"></u-cell-item>
 			</u-cell-group>
+		</view>
+		<view class="u-m-t-20">
+			<u-button type="error" @click="back">退出</u-button>
 		</view>
 
 		<view>
@@ -29,6 +33,7 @@
 				</u-field>
 			</u-modal>
 		</view>
+		
 	</view>
 </template>
 
@@ -36,27 +41,43 @@
 	export default {
 		data() {
 			return {
-				pic: 'https://uviewui.com/common/logo.png',
+				pic: '',
 				show: false,
-				userName: '',
+				userName: "",
 				pwdShow: false,
 				oldPwd: "",
-				newPwd:""
+				newPwd: ""
+			
 			}
 		},
 		onLoad() {
-
+          
 		},
 		methods: {
-		
+
 			updateUserNameFn() {
 				this.$u.toast("提交成功")
 			},
 			cacelFn() {
 				this.$u.toast("取消成功")
 			},
-			updatePwdFn(){
+			updatePwdFn() {
 				this.$u.toast("修改密码")
+			},
+			toImgUpload(){
+				uni.navigateTo({
+					url:"./uploadImg"
+				})
+			},
+			back(){
+				uni.navigateTo({
+					url:'../login/index'
+				})
+			},
+			toAddr(){
+				uni.navigateTo({
+					url:'../address/index'
+				})
 			}
 		},
 		onBackPress() {
@@ -65,11 +86,14 @@
 				this.show = false
 				return true;
 			}
-		    if(this.pwdShow){
-				this.pwdShow=false
+			if (this.pwdShow) {
+				this.pwdShow = false
 				return true;
 			}
 
+		},
+		onShow() {
+			 this.pic=this.$BaseIp+this.$store.state.userInfo.userImg.imgUrl
 		}
 	}
 </script>

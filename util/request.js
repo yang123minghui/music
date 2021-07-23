@@ -1,6 +1,6 @@
 // 封装 和后端联调接口
-
-const baseURL  = "http://127.0.0.1:9090/"; //公共路径  后端给的url
+import Vue from 'vue'
+const baseURL=Vue.prototype.$BaseIp+"/routerController" //公共路径  后端给的url
 
 export const myRequest = (options) => {
 	//加载loading

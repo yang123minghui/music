@@ -3,7 +3,7 @@
 		<view class="status_bar">
 			<!-- 这里是状态栏 -->
 		</view>
-		<view class="u-flex user-box u-p-l-30 u-p-r-20 u-p-b-30 u-p-t-20 " style="background-image: url(../../static/images/navbg.png)">
+		<view class="u-flex user-box u-p-l-30 u-p-r-20 u-p-b-30 u-p-t-20 " style="background-image: url(../../static/images/a.jpg)">
 			<view class="u-m-r-10">
 				<u-avatar :src="pic" size="140"></u-avatar>
 			</view>

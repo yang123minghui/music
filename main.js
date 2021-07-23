@@ -3,6 +3,9 @@ import App from './App'
 //引入公共接口
 import {myRequest} from './util/request.js'
 import store from 'util/store.js'
+
+//全局url
+Vue.prototype.$BaseIp="http://192.168.10.214:8888/"
 //挂载全局
 Vue.prototype.$myRequest = myRequest
 Vue.prototype.$store=store

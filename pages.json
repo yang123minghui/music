@@ -3,7 +3,25 @@
 		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+
+
 		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"app-plus": { //uni-app项目对应节点名称为"app-plus"
+
+					"titleNView": {
+
+						"autoBackButton": false
+
+					}
+
+				}
+
+			}
+
+		}, {
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "首页"
@@ -13,9 +31,9 @@
 		{
 			"path": "pages/my/index",
 			"style": {
-				"navigationStyle":"custom", 
-				"app-plus":{
-					"titleNView":false
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
 				}
 			}
 		},
@@ -26,13 +44,78 @@
 
 			}
 
+		},
+		{
+			"path": "pages/my/uploadImg",
+			"style": {
+				"navigationBarTitleText": "更换头像"
+
+			}
+
+		},
+		{
+			"path": "pages/address/addSite",
+			"style": {
+				"navigationBarTitleText": "新增地址",
+				"navigationBarTextStyle": "white",
+				"app-plus": {
+					"titleNView": { //设置顶部右侧按钮
+						"buttons": [{
+							"text": "\ue667",
+							"fontSrc": "/static/font/iconfont.ttf",
+							"fontSize": "30px",
+							"color": "#ffffff",
+							"float": "right"
+						}]
+
+					}
+				}
+
+			}
+
+		},
+		{
+			"path": "pages/address/index",
+			"style": {
+				"navigationBarTitleText": "地址列表"
+
+			}
+
+		},
+		{
+			"path": "pages/chat/index",
+			"style": {
+				"navigationBarTitleText": "聊天",
+				"app-plus": {
+					"titleNView": { //设置顶部右侧按钮
+						"buttons": [{
+							"text": "\ue626",
+							"fontSrc": "/static/font/iconfont.ttf",
+							"fontSize": "30px",
+							"color": "#ffffff",
+							"float": "right"
+						}]
+				
+					}
+				}
+
+			}
+
+		},
+		{
+			"path": "pages/contacts/index",
+			"style": {
+				"navigationBarTitleText": "联系人"
+
+			}
+
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarBackgroundColor": "#F6AE65",
+		"backgroundColor": "#F6AE65"
 	},
 	"tabBar": {
 		"color": "#7A7E83",
@@ -40,15 +123,28 @@
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		"list": [{
-			"pagePath": "pages/index/index",
-			"iconPath": "static/images/home.png",
-			"selectedIconPath": "static/images/home-select.png",
-			"text": "首页"
-		}, {
-			"pagePath": "pages/my/index",
-			"iconPath": "static/images/my.png",
-			"selectedIconPath": "static/images/my-select.png",
-			"text": "我的"
-		}]
+				"pagePath": "pages/index/index",
+				"iconPath": "static/images/home.png",
+				"selectedIconPath": "static/images/home-select.png",
+				"text": "首页"
+			}, {
+				"pagePath": "pages/chat/index",
+				"iconPath": "static/images/chat.png",
+				"selectedIconPath": "static/images/chat-select.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/contacts/index",
+				"iconPath": "static/images/person.png",
+				"selectedIconPath": "static/images/person-select.png",
+				"text": "联系人"
+			},
+			{
+				"pagePath": "pages/my/index",
+				"iconPath": "static/images/my.png",
+				"selectedIconPath": "static/images/my-select.png",
+				"text": "我的"
+			}
+		]
 	}
 }

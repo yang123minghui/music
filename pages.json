@@ -109,6 +109,26 @@
 
 			}
 
+		},
+		{
+			"path": "pages/chat/ChatArea",
+			"style": {
+				"navigationBarTitleText": "聊天",
+				"app-plus": {
+					"titleNView": { //设置顶部右侧按钮
+						"buttons": [{
+							"text": "\ue61f", 
+							"fontSrc": "/static/font/iconfont.ttf",
+							"fontSize": "30px",
+							"color": "#ffffff",
+							"float": "right"
+						}]
+				
+					}
+				}
+		
+			}
+		
 		}
 	],
 	"globalStyle": {

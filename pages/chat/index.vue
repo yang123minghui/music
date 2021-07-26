@@ -1,6 +1,9 @@
 <template>
 	<view class="">
 		<u-mask :show="show" @click="show = false" :custom-style="{background: 'rgba(0, 0, 0, 0)'}" :zoom="false">
+			<view id="triangle-up">
+				
+			</view>
 			<ul class="tips-menu"  @tap.stop>
 				<li>
 					<span class="icon">图标</span>
@@ -16,7 +19,7 @@
 		</view>
 		<view class="">
 			<u-cell-group>
-				<u-cell-item>
+				<u-cell-item @click="toChatArea">
 					<view slot="icon" class="u-relative">
 						<u-avatar src="https://uviewui.com/common/logo.png" size="140">
 						</u-avatar>
@@ -94,6 +97,11 @@
 
 		},
 		methods: {
+			toChatArea(){
+				uni.navigateTo({
+					url:'ChatArea'
+				})
+			}
 
 		},
 		onShow() {
@@ -126,19 +134,31 @@
 </script>
 
 <style scoped>
+	#triangle-up {
+	    width: 0;
+	    height: 0;
+	    border-left: 13px solid transparent;
+	    border-right: 13px solid transparent;
+	    border-bottom: 13px solid #49484b;
+		position: absolute;
+		right: 10rpx;
+		top: 44px;
+		
+	}
 	.tips-menu {
 	    position: absolute;
 	    z-index: 2;
 	    width: 133px;
 	    font-size: 16px;
-	    right: -10px;
+	    right: 0px;
 	    top: 54px;
 	    text-align: left;
-	    border-radius: 2px;
+	    border-radius: 10px;
 	    background-color: #49484b;
 	    padding: 0 15px;
 	    -webkit-transform-origin: 90% 0;
 	    transform-origin: 90% 0;
+		
 	}
 	.tips-menu li {
 	    position: relative;

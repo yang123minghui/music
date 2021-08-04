@@ -129,6 +129,24 @@
 		
 			}
 		
+		},
+		{
+			"path": "pages/chat/addFriends",
+			"style": {
+				"navigationBarTitleText": "添加好友"
+				
+		
+			}
+		
+		},
+		{
+			"path": "pages/my/wechatMoments",
+			"style": {
+				"navigationBarTitleText": "朋友圈"
+				
+		
+			}
+		
 		}
 	],
 	"globalStyle": {

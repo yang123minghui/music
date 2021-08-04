@@ -238,8 +238,20 @@
 		</view>
 		<view class="u-flex u-p-10 u-border-top u-bg-gray"
 			style="position:fixed;bottom: 0;width: 100%;background-color: #ffffff;">
-			<u-input class=" u-m-r-10" v-model="value" :type="text" :border="true" />
-			<u-button :custom-style="customStyle">发送</u-button>
+
+			<view class="u-m-r-10">
+                 <u-avatar src="../../static/images/yuying.png" size="55"></u-avatar> 
+			</view>
+			<view class="u-flex-1">
+				<u-input class="u-m-r-10" v-model="value" :type="text" :border="true" />
+			</view>
+			<view class=" u-m-r-10">
+				<u-avatar src="../../static/images/smail.png" size="50"></u-avatar>
+			</view>
+			<view class="">
+				<u-avatar src="../../static/images/add.png" size="55"></u-avatar>
+			</view>
+			<!-- <u-button :custom-style="customStyle">发送</u-button> -->
 		</view>
 	</view>
 
